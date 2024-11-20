@@ -1,11 +1,19 @@
 export default function RootLayout({
-    children,
+  children,
 }: Readonly<{
-    children: React.ReactNode;
+  children: React.ReactNode;
 }>) {
-    return (
-            <main>
-                {children}
-            </main>
-    );
+  return (
+    <main className="relative h-screen w-full">
+      <div className="absolute size-full ">
+        {/* <image
+          src="/images/bg-img-png"
+          alt="background"
+          //   fill
+          className="size-full"
+        /> */}
+      </div>
+      {children}
+    </main>
+  );
 }
