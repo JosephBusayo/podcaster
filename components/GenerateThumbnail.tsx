@@ -84,7 +84,6 @@ const GenerateThumbnail = ({
       <div className="generate_thumbnail">
         <Button
           type="button"
-          variant="plain"
           onClick={() => setIsAiThumbnail(true)}
           className={cn("", {
             "bg-black-6": isAiThumbnail,
@@ -94,7 +93,6 @@ const GenerateThumbnail = ({
         </Button>
         <Button
           type="button"
-          variant="plain"
           onClick={() => setIsAiThumbnail(false)}
           className={cn("", {
             "bg-black-6": !isAiThumbnail,
@@ -109,7 +107,7 @@ const GenerateThumbnail = ({
             <Label className="text-16 font-bold text-white-1">
               AI Prompt to generate Thumbnail
             </Label>
-            <Textarea
+            <Input
               className="input-class font-light focus-visible:ring-offset-orange-1"
               placeholder="Provide text to generate thumbnail"
               rows={5}

@@ -14,6 +14,10 @@ const nextConfig = {
         protocol: "https",
         hostname: "img.clerk.com",
       },
+      {
+        protocol: "https",
+        hostname: "clever-cod-961.convex.cloud", // Add this
+      },
     ],
   },
 };
