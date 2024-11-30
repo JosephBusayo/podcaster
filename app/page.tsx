@@ -72,18 +72,15 @@ const LandingPage = () => {
       </div>
 
       {/* Network section */}
-      <div className="flex justify-center items-center bg-gray-50 py-16">
+      <div className="flex justify-center items-center flex-col bg-gray-50 py-16">
+        <h3 className="text-4xl font-bold text-center text-gray-900 mb-8">
+          Our Networks
+        </h3>
         <section className="bg-white py-10 px-6 rounded-lg shadow-lg w-full max-w-5xl">
-          <h3 className="text-4xl font-bold text-center text-gray-900 mb-8">
-            Our Networks
-          </h3>
+
           <div className="container mx-auto flex flex-col gap-12">
-            {/* Map through the networksData and display each one separately */}
             {networksData.map((network, index) => (
-              <div
-                key={index}
-                className="flex flex-col lg:flex-row items-start gap-12"
-              >
+              <div key={index} className="flex flex-col lg:flex-row items-start gap-12">
                 {/* Left Content */}
                 <div className="flex-1">
                   <h4 className="text-2xl font-bold text-gray-900 mb-4">
@@ -119,6 +116,49 @@ const LandingPage = () => {
           </div>
         </section>
       </div>
+
+      <section>
+        <h3 className="text-4xl font-bold text-center text-gray-900 mb-8">
+          Our Networks
+        </h3>
+
+        <section>
+        {networksData.map((network, index) => (
+              <div key={index} className="flex flex-col lg:flex-row items-start gap-12">
+                {/* Left Content */}
+                <div className="flex-1">
+                  <h4 className="text-2xl font-bold text-gray-900 mb-4">
+                    {network.title}
+                  </h4>
+                  <p className="text-gray-700 leading-relaxed mb-4">
+                    {network.description}
+                  </p>
+                  <button className="px-6 py-3 bg-black text-white text-sm font-medium rounded-full hover:bg-gray-800 transition duration-300">
+                    Learn More about {network.title}
+                  </button>
+                </div>
+
+                {/* Right Card */}
+                <div className="flex-1 grid grid-cols-1 md:grid-cols-1 gap-6">
+                  <div className="bg-white p-6 rounded-lg shadow-md flex items-center gap-4 border border-gray-200">
+                    <div className={`${network.bgColor} p-4 rounded-full`}>
+                      <span
+                        className={`${network.textColor} text-xl font-bold`}
+                      >
+                        {network.icon}
+                      </span>
+                    </div>
+                    <div>
+                      <h4 className="text-lg font-bold text-gray-900">
+                        {network.title}
+                      </h4>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
+        </section>
+      </section>
 
       {/* Footer */}
       <footer className="py-6 text-center text-gray-600">
